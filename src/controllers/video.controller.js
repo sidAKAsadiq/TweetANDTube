@@ -28,6 +28,7 @@ const get_all_videos = async_handler(async (req, res) => {
 
     const skip_value = (page_int - 1) * limit_int
 
+
     let sort_type_num;
     if(sort_type === 'desc'){
         sort_type_num = -1
@@ -35,6 +36,8 @@ const get_all_videos = async_handler(async (req, res) => {
     else{
         sort_type_num = 1
     }
+
+    
 
     const search_results = await Video.aggregate([
     {
@@ -59,6 +62,7 @@ const get_all_videos = async_handler(async (req, res) => {
     }
 ])
 
+    console.log(search_results)
 
     if(!search_results){
         throw new api_error(500 , "Cant fetch search results in get all videos")
