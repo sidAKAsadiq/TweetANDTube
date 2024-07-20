@@ -74,8 +74,6 @@ const get_all_videos = async_handler(async (req, res) => {
 })
 
 
-
-
 // TODO: get video, upload to cloudinary, create video
 const publish_video = async_handler(async (req, res) => {
     const { title, description} = req.body

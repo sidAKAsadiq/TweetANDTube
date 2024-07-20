@@ -22,9 +22,11 @@ app.use(cookieParser()) //to be able to access and set user's browser cookies
 //Working with routes - Import & declare
 import user_router from './routes/user.routes.js'
 import video_router from './routes/video.routes.js'
+import subscription_router from './routes/subscription.routes.js'
 
 app.use('/api/v1/users' , user_router)
 app.use('/api/v1/videos' , video_router)
+app.use('/api/v1/subscriptions', subscription_router)
 
 
 

@@ -1,3 +1,4 @@
+import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 import mongoose from "mongoose";
 
 const subscription_schema = new mongoose.Schema({
@@ -12,6 +13,7 @@ const subscription_schema = new mongoose.Schema({
     },    
 } , {timestamps : true})
 
+subscription_schema.plugin(mongooseAggregatePaginate)
 
 
 export const Subscription = mongoose.model("Subscription" , subscription_schema)
