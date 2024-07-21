@@ -24,7 +24,7 @@ import user_router from './routes/user.routes.js'
 import video_router from './routes/video.routes.js'
 import subscription_router from './routes/subscription.routes.js'
 import playlist_router from './routes/playlist.routes.js'
-import tweet_router_router from './routes/tweet.routes.js'
+import tweet_router from './routes/tweet.routes.js'
 
 
 app.use('/api/v1/users' , user_router)
