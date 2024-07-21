@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
-import { Tweet } from "./tweet.models";
 
 const like_schema = new mongoose.Schema({
+    liked_by : {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+    },
     comment : {
         type : mongoose.Schema.Types.ObjectId,
         ref : "Comment",
@@ -9,10 +12,6 @@ const like_schema = new mongoose.Schema({
     video : {
         type : mongoose.Schema.Types.ObjectId,
         ref : "Video",
-    },
-    liked_by : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
     },
     tweet : {
         type: mongoose.Schema.Types.ObjectId,

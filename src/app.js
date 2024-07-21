@@ -25,6 +25,7 @@ import video_router from './routes/video.routes.js'
 import subscription_router from './routes/subscription.routes.js'
 import playlist_router from './routes/playlist.routes.js'
 import tweet_router from './routes/tweet.routes.js'
+import comment_router from './routes/comment.routes.js'
 
 
 app.use('/api/v1/users' , user_router)
@@ -32,6 +33,7 @@ app.use('/api/v1/videos' , video_router)
 app.use('/api/v1/subscriptions', subscription_router)
 app.use('/api/v1/playlists', playlist_router)
 app.use('/api/v1/tweets', tweet_router)
+app.use('/api/v1/comments', comment_router)
 
 
 
