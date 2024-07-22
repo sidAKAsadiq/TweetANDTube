@@ -28,6 +28,7 @@ import tweet_router from './routes/tweet.routes.js'
 import comment_router from './routes/comment.routes.js'
 import like_router from './routes/like.routes.js'
 import health_check_router from './routes/health_check.routes.js'
+import dashboard_router from './routes/dashboard.routes.js'
 
 
 app.use('/api/v1/users' , user_router)
@@ -38,6 +39,7 @@ app.use('/api/v1/tweets', tweet_router)
 app.use('/api/v1/comments', comment_router)
 app.use('/api/v1/likes', like_router)
 app.use('/api/v1/health_check', health_check_router)
+app.use('/api/v1/dashboard', dashboard_router)
 
 
 

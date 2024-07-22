@@ -50,8 +50,6 @@ const get_user_tweets = async_handler(async (req, res) => {
 
         return res.status(200).json(new api_response(200 , user_tweets , "tweets fetched!"))
         
-
-
 })
 
 //TODO: update tweet

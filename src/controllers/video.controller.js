@@ -116,6 +116,7 @@ const publish_video = async_handler(async (req, res) => {
         duration : upload_video_to_cloud.duration,
         is_published : true,
         owner : req.user._id,        
+        views : 10  //for testing dashboard controller
 })
 
     if(!video){
