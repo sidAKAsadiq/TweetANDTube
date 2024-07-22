@@ -186,9 +186,9 @@ const delete_comment = async_handler(async (req, res) => {
 
 export {
     get_video_comments, 
+    get_tweet_comments,
     add_comment_video, 
+    add_comment_tweet, 
     edit_comment,
     delete_comment,
-    add_comment_tweet, 
-    get_tweet_comments,
     }
