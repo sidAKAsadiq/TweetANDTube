@@ -233,16 +233,16 @@ const get_ai_suggested_titles = async_handler(async (req,res) => {
 
     const video = await Video.findById(video_id)
 
-    const title = video.title
+    const current_title = video.title
 
-    const suggested_titles_string = await geminiAi_model.ai_suggested_titles(title)
+    const suggested_titles_string = await geminiAi_model.ai_suggested_titles(current_title)
     console.log(suggested_titles_string)
 
     const suggested_titles = suggested_titles_string
     .split("\n") // Split the string into lines
     .filter(line => line.trim() !== "") // Remove empty lines
 
-   return res.status(200).json(new api_response(200 , suggested_titles , "Ai titles suggested!"))
+   return res.status(200).json(new api_response(200 , {current_title,suggested_titles} , "Ai titles suggested!"))
 
 
 })
@@ -252,16 +252,16 @@ const get_ai_suggested_descriptions = async_handler(async (req,res) => {
 
     const video = await Video.findById(video_id)
 
-    const description = video.description
+    const current_description = video.description
 
-    const suggested_descriptions_string = await geminiAi_model.ai_suggested_descriptions(description)
+    const suggested_descriptions_string = await geminiAi_model.ai_suggested_descriptions(current_description)
     console.log(suggested_descriptions_string)
 
     const suggested_descriptions = suggested_descriptions_string
     .split("\n") // Split the string into lines
     .filter(line => line.trim() !== "") // Remove empty lines
 
-   return res.status(200).json(new api_response(200 , suggested_descriptions , "Ai descriptions suggested!"))
+   return res.status(200).json(new api_response(200 , {current_description,suggested_descriptions} , "Ai descriptions suggested!"))
 
 
 })

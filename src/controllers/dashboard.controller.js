@@ -11,7 +11,7 @@ import { Tweet } from "../models/tweet.models.js";
 const get_channel_stats = async_handler(async (req, res) => {
     const user_channel_id = req.user?._id
     
-    const results = await Video.aggregate([
+    const total_views = await Video.aggregate([
         {
             $match : {
                 owner : new mongoose.Types.ObjectId(user_channel_id)
@@ -94,14 +94,14 @@ const get_channel_stats = async_handler(async (req, res) => {
         total_likes_on_tweets += like_docs_of_given_tweet.length
     }
 
-    results.push(total_subscribers)
-    results.push(total_videos)
-    results.push(total_likes_on_videos)
-    results.push(total_likes_on_tweets)
+    // results.push(total_subscribers)
+    // results.push(total_videos)
+    // results.push(total_likes_on_videos)
+    // results.push(total_likes_on_tweets)
 
 
 
-    return res.status(200).json(new api_response(200 , results , "test"))
+    return res.status(200).json(new api_response(200 , {total_views,total_subscribers,total_videos,total_likes_on_videos,total_likes_on_tweets} , "test"))
 
 
 })
