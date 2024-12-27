@@ -1,6 +1,6 @@
 # TweetANDTube
 
-TweetANDTube combines the functionality of video streaming and tweeting platforms with integrated Generative AI via Google Gemini to provide additional features. The video shows the working of this project and how AI has been a cherry on top.
+TweetANDTube covers the BACKEND that combines the functionality of video streaming and tweeting platforms with integrated Generative AI via Google Gemini to provide additional features. The video shows the working of this project and how AI has been a cherry on top.
 
 ## Problem
 
@@ -26,6 +26,6 @@ TweetANDTube addresses this need by combining the functionalities of video strea
 - **Generative AI Model**: Gemini-1.5-flash
 
 ## Links
-
+- **Demo**: [TweetANDTube LinkedIn](https://www.linkedin.com/posts/muhammad-sadiq-054939219_i-built-a-backend-system-in-javascript-with-activity-7222252364559220738-0yj6?utm_source=share&utm_medium=member_desktop)
 - **Postman Collection**: [TweetANDTube Postman Collection](https://lnkd.in/duMMzejz)
 - **Data Modelling**: [TweetANDTube Data Modelling](https://lnkd.in/dAwNZq_S)
